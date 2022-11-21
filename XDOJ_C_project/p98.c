@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main()
+{
+    float n;
+    char s;
+    scanf("%f", &n);
+    if (n >= 90)
+    {
+        s = 'A';
+    }else if (n >= 80)
+    {
+        s = 'B';
+    }else if (n >= 70)
+    {
+        s = 'C';
+    }else if (n >= 60)
+    {
+        s = 'D';
+    }else
+        s = 'E';
+    printf("%.2f %c", n, s);
+    return 0;
+}
