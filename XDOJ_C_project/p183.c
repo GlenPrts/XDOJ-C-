@@ -1,13 +1,14 @@
 #include <stdio.h>
 int main()
 {
-    int m, n, s = n, s1, s2;
+    int m, n, s, s1, s2;
     scanf("%d %d", &m, &n);
+    s = n;
     if (m < n)
     {
         s = m;
     }
-    
+
     for (int i = s; ; i--)
     {
      if (n % i ==0 && m % i ==0)
@@ -17,7 +18,7 @@ int main()
      }
 
     }
-    for (int i = 1; ; i++)
+    for (int i = s; ; i++)
     {
         if (i % n == 0 && i % m == 0)
         {
