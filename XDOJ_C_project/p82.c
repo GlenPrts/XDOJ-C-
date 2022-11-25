@@ -9,10 +9,10 @@ int main()
     if (len != 0)
     {
         sum++;
-        if (len >= 8)
+        if (len > 8)
             sum++;
         int flag = 0;
-        char mflag[6];
+        char mflag[4];
         memset(mflag, 1, sizeof(mflag));
         for (int i = 0; i < len; i++)
         {
@@ -32,7 +32,12 @@ int main()
                     flag++;
                 mflag[0] = 0;
             }else
-                flag++;
+            {
+                if (mflag[3])
+                    flag++;
+                mflag[3] = 0;
+            }
+
         }
         switch (flag)
         {
@@ -42,14 +47,13 @@ int main()
         case 3:
             sum += 2;
             break;
+        case 4:
+            sum += 3;
+            break;
         default:
             break;
         }
-        if (flag >=3)
-        {
-            sum += 3;
-        }
-
+    
     }
     printf("%d", sum);
 }
